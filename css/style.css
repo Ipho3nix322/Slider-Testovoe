@@ -1,0 +1,208 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../assets/fonts/Roboto-Light.ttf');
+    src: url('../assets/fonts/Roboto-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'LeksaSansPro';
+    src: url('../assets/fonts/LeksaSansPro-ExtraLight.ttf');
+    src: url('../assets/fonts/LeksaSansPro-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+
+body {
+    margin: 0;
+    background-color: #F1EAE0;
+    font-family: Roboto, system-ui, -apple-system, "Segoe UI",  "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #1F3F68;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-between;
+  align-items: end;
+  width: 80%;
+  height: 50%;
+  margin: 10% auto;
+}
+
+.slide-image{
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  height: auto;
+  width: 37%;
+}
+
+.slide-image-mobile {
+  display: none;
+}
+
+.slide-content{
+  box-sizing: border-box;
+  width: 85%;
+  background-color: #FFFFFF;
+  padding-left: 17%;
+  margin: 0 0% 0 20%;
+}
+
+.content-padding{
+  padding-left: 3%;
+}
+
+.slide-data{
+  padding-left: 3%;
+  color: #FFFFFF;
+  font-size: 24px;
+  background-color: #00305F;
+}
+
+.doctor-name{
+  font-size: 24px;
+  letter-spacing: 0.48px;
+  padding-top: 3%;
+}
+
+.doctor-role{
+  font-size: 24px;
+  letter-spacing: 0.32px;
+  padding: 2% 0 6% 0;
+}
+
+.slide-title{
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: 0.64px;
+}
+
+.slide-information{
+
+  padding: 2% 0 0 0;
+  font-size: 24px;
+}
+
+.doctor-name, .doctor-role, .slide-title{
+  color: #00305F;
+  font-family: LeksaSansPro;
+}
+
+.more_information {
+  display: inline-block;
+  background: #BA9F67;
+  color: #FFFFFF;
+  padding: 1% 5%;
+  margin: 3% 0 2.5% 0;
+  text-decoration: none;
+  max-width: 600px;
+}
+
+.slide-data-mobile {
+  display: none;
+}
+
+.swiper-buttons{
+  align-items: center;
+  display: flex;
+  margin: 5% 0 0 50%;
+  width: 20%;
+  height: 10%;
+}
+
+.swiper .swiper-pagination {
+  position: static !important;
+}
+
+.swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  font-size: 10px;
+  margin: 0 0,5%  !important;
+  background-color: #BA9F6799;
+}
+
+.swiper .swiper-pagination-bullet-active {
+  background-color: #00305F;
+}
+
+.swiper-bg-image {
+  position: absolute;
+  z-index: 0;
+  right: -12%;
+  top: 0;
+  height: 100%;
+  width: auto;
+}
+
+@media(max-width: 1345px) {
+  .slide-data{
+    display: none;
+  }
+  .slide-data-mobile {
+    margin-top: 2%;
+    padding: 12px 32px;
+    color: #FFFFFF;
+    font-size: 16px;
+    background-color: #00305F;
+    display: block;
+    position: absolute;
+    z-index: 4;
+  }
+  .slide-image {
+    display: none;
+  }
+  .slide-image-mobile {
+    display: block;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .swiper-bg-image {
+    display: none;
+  }
+  .swiper-buttons {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .slide-content {
+    max-width: 500px;
+    padding-left: 0;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .doctor-name {
+    line-height: 130%;
+    font-size: 16px;
+    letter-spacing: 0.32px;
+    display: inline-block;
+  }
+  .doctor-role {
+    line-height: 130%;
+    font-size: 16px;
+    letter-spacing: 0.28px;
+    margin-left: 5%;
+    display: inline-block;
+  }
+  .slide-title{
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: 0.48px;
+  }
+  .slide-information {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 150%;
+  }
+  .more_information {
+    font-size: 16px;
+  }
+}
